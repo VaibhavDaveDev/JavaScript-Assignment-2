@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Employee Management System</h1>
+
+    <h3 id="Add_Update" style="text-align: center">Add Employee Details</h3>
+    <form id="employeeForm">
+      <input type="number" id="empId" placeholder="Employee ID" required />
+      <input type="text" id="empName" placeholder="Employee Name" required />
+      <select id="empDesignation">
+        <option value="">Designation</option>
+        <option value="Intern">Intern</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="HR">HR</option>
+      </select>
+      <input type="number" id="empSalary" placeholder="Salary" required />
+      <input type="text" id="empAddress" placeholder="Address" required />
+      <button type="button" onclick="addEmployee()">Add Employee</button>
+    </form>
+
+    <div class="content">
+      <div class="search-controls">
+        <div class="search-group">
+          <input type="number" id="searchId" placeholder="Search by ID" />
+          <button onclick="findEmployee()">Find Employee</button>
+        </div>
+        <div class="search-group">
+          <input type="number" id="searchIdToDelete" placeholder="Delete by ID" />
+          <button onclick="deleteEmployee()">Delete Employee</button>
+        </div>
+        <div class="search-group">
+          <select id="filterDesignation">
+            <option value="">Filter by Designation</option>
+            <option value="All">All</option>
+            <option value="Intern">Intern</option>
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="HR">HR</option>
+          </select>
+          <button onclick="filterEmployees()">Filter Employees</button>
+        </div>
+      </div>
+      <button class="salary-increase" onclick="increaseSalaries()">
+        Increase All Salaries by 10%
+      </button>
+    </div>
+
+    <h2 style="text-align: center">Employee List</h2>
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeList"></tbody>
+    </table>
+
+    <h2 id="Display"></h2>
+    <script src="script.js"></script>
+  </body>
+</html>

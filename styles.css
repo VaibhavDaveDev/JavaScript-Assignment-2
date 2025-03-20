@@ -1,0 +1,188 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #1e272e; /* Darker background */
+    color: #ecf0f1; /* Light text color for contrast */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Header Styling */
+h1 {
+    color: #ecf0f1;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #2f3640;
+}
+
+/* Form Section */
+form#employeeForm {
+    background: #2f3640; /* Slightly lighter than the body */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form#employeeForm input,
+form#employeeForm select {
+    padding: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    background: #1e272e;
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+form#employeeForm input:focus,
+form#employeeForm select:focus {
+    border-color: #44bd32; /* Green focus color */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background: #44bd32; /* Solid green */
+    color: #ecf0f1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+button:hover {
+    background: #3d9970; /* Slightly darker green on hover */
+}
+
+/* Content Section */
+.content {
+    background: #2f3640;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #2f3640;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7f8c8d;
+    color: #ecf0f1;
+}
+
+th {
+    background: #1e272e;
+}
+
+tr:hover {
+    background: #353b48; /* Slightly lighter row on hover */
+}
+
+/* Styling for the search-group container */
+.search-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between dropdown and button */
+    margin-bottom: 10px;
+    justify-content: center; /* Center align the group */
+}
+
+/* Styling for the dropdown (select) */
+#filterDesignation {
+    padding: 10px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    background: #1e272e; /* Dark background for dropdown */
+    color: #ecf0f1; /* Light text color */
+    font-size: 14px;
+    width: 220px; /* Slightly wider for better readability */
+    text-align: center; /* Center align text inside dropdown */
+}
+
+#filterDesignation:focus {
+    border-color: #44bd32; /* Green border on focus */
+    outline: none;
+}
+
+/* Styling for the filter button */
+button {
+    background: #44bd32; /* Solid green */
+    color: #ecf0f1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Styling for the "Increase All Salaries" button */
+.salary-increase {
+    background: #27ae60; /* Dark green background */
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px; /* Add spacing above the button */
+    text-align: center;
+    display: block; /* Ensure it spans the full width of its container */
+    margin-left: auto;
+    margin-right: auto; /* Center align the button */
+}
+
+.salary-increase:hover {
+    background: #229954; /* Slightly darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form#employeeForm,
+    .content {
+        width: 100%;
+    }
+
+    .search-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    .search-group {
+        flex-direction: column; /* Stack dropdown and button vertically */
+        gap: 10px;
+    }
+
+    button, #filterDesignation {
+        width: 100%; /* Full width for buttons and dropdowns */
+    }
+}
